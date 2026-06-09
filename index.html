@@ -2,23 +2,47 @@
   <head>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <title> Segunda experiência de realidade aumentada usando modelo AR.js do A - frame e o marcador Hiro. </title>
+    <title> Terceira experiência de realidade aumentada usando modelo AR.js do A - frame e o marcador Hiro. </title>
   </head>
   <body style = "margin 0px; overflow: hidden">
     <a-scene vr-mode-ui = "enabled: false" embedded arjs="debugUIEnable: false">
+      <a-assets>
+        <a-assets-item id = "monkey" src = "macacolilas"></a-assets-item>
+      </a-assets>
       <a-marker preset="hiro">
-        <a-image src = "carro.avif" position = "0 0 0" rotation = "-90 0 0" width = "1.77" height = "1">
-          
-        </a-image>
+        <a-entity 
+          id = "modelo3d" 
+          position = "0 0 0" 
+          rotation = "0 0 0" 
+          scale = "0.5 0.5 0.5"
+          gltf-model = "#monkey"
+          >
+        </a-entity>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
 
+<!-- <html> carro
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <title> Segunda experiência de realidade aumentada usando modelo AR.js do A - frame e o marcador Hiro. </title>
+  </head>
+  <body style = "margin 0px; overflow: hidden">
+    <a-scene vr-mode-ui = "enabled: false" embedded arjs="debugUIEnable: false">
+      <a-marker preset="hiro">
+        <a-image src = "carro.avif" position = "0 0 0" rotation = "-90 0 0" width = "1.77" height = "1"></a-image>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html> -->
+
 
 <!-- 
-<html>
+<html> cubo
   <head>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
